@@ -1,0 +1,272 @@
+/* Navbar fixa do AF Café */
+.navbar.fixed-top {
+  background-color: #f5f0e8 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  z-index: 1030;
+}
+
+/* Links do menu */
+.navbar.fixed-top .nav-link {
+  color: #4b3426;
+  transition: color 0.2s ease;
+}
+
+.navbar.fixed-top .nav-link:hover,
+.navbar.fixed-top .nav-link.active {
+  color: #198754;
+}
+
+/* Campo de pesquisa */
+.navbar.fixed-top .form-control {
+  background-color: #ffffff;
+}
+
+/* Botão hambúrguer */
+.navbar.fixed-top .navbar-toggler {
+  border-color: #b8a995;
+}
+
+.navbar.fixed-top .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.2);
+}
+
+.navbar-brand img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+body {
+  padding-top: 0;
+}
+
+/* CARROSSEL AF CAFÉ */
+#carousel-coffee {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 105px;
+  overflow: hidden;
+}
+
+#carousel-coffee .carousel-inner {
+  width: 100%;
+}
+
+#carousel-coffee .carousel-item {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#carousel-coffee .carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Degradê sobre a imagem */
+#carousel-coffee .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent 45%, rgb(31 31 31 / 45%));
+  pointer-events: none;
+}
+
+/* Controles do carrossel acima do degradê */
+#carousel-coffee .carousel-control-prev,
+#carousel-coffee .carousel-control-next,
+#carousel-coffee .carousel-indicators {
+  z-index: 2;
+}
+
+/* Navbar fixa */
+.navbar.fixed-top {
+  min-height: 105px;
+}
+
+/* Telas menores */
+@media (max-width: 767.98px) {
+  .navbar.fixed-top {
+    min-height: 90px;
+  }
+
+  #carousel-coffee {
+    margin-top: 90px;
+  }
+}
+
+/* Citação de destaque */
+.blockquote {
+  padding: 0 1rem;
+  margin: 1.5rem auto;
+}
+
+.blockquote h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: 1.5;
+}
+
+.blockquote-footer {
+  color: #806b59;
+}
+
+/* Menu */
+#menu .nav-tabs {
+  border-bottom: 1px solid #d8c7b5;
+}
+
+#menu .nav-tabs .nav-link {
+  color: #6b4a35;
+  background-color: #f5f0e8;
+  border: 1px solid #e1d5c8;
+  border-bottom-color: #d8c7b5;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Hover */
+#menu .nav-tabs .nav-link:hover {
+  color: #146c43;
+  background-color: #eee5d9;
+  border-color: #d8c7b5;
+}
+
+/* Categoria selecionada */
+#menu .nav-tabs .nav-link.active {
+  color: #198754;
+  background-color: #ffffff;
+  border-color: #d8c7b5;
+  border-bottom-color: #ffffff;
+  font-weight: 600;
+}
+
+/* Painéis das categorias */
+#menu .tab-content {
+  background-color: #ffffff;
+  border: 1px solid #e1d5c8;
+  border-top: 0;
+  border-radius: 0 0 0.375rem 0.375rem;
+  color: #4b3426;
+}
+
+/* Acessibilidade: foco pelo teclado */
+#menu .nav-tabs .nav-link:focus-visible {
+  outline: 2px solid #198754;
+  outline-offset: 2px;
+}
+
+/* Categorias desabilitadas, caso existam */
+#menu .nav-tabs .nav-link:disabled {
+  color: #999999;
+  background-color: #eeeeee;
+  border-color: #e1d5c8;
+  cursor: not-allowed;
+}
+
+#destaques .card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==============================
+   FOOTER AF CAFÉ
+============================== */
+
+.footer-afcafe {
+  background-color: #f5f0e8;
+  color: #4b3426;
+  margin-top: 60px;
+  border-top: 1px solid #e1d5c8;
+}
+
+.footer-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.footer-brand h5,
+.footer-title {
+  color: #6b4a35;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  max-width: 350px;
+  line-height: 1.7;
+  color: #665548;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  color: #665548;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: #665548;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #198754;
+}
+
+.footer-divider {
+  border-color: #cdbba8;
+  opacity: 0.8;
+  margin: 30px 0 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #665548;
+}
+
+.footer-slogan {
+  font-style: italic;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 767.98px) {
+  .footer-afcafe {
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
